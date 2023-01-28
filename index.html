@@ -1,0 +1,95 @@
+<!--
+  Name: Nurkhat Jumabaev
+  Course name: CSc337
+  Description: This is the html page for 
+  creating a sign-up form.
+  There are 11 fields in the form. 
+  6 of them required and 5 of them are optional.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      PA 3 Assignment
+    </title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1> Arsenal F.C Fandom</h1>
+    <img id="img-1" src="/img/logo.jpg" alt="Logo of Arsenal F.C">
+    <img id="img-2" src="/img/logo.jpg" alt="Logo of Arsenal F.C">
+
+    <div id="content">
+      <p>
+        Use this form below to sign up for Arsenal F.C Fandom. 
+        Sign-up for the newsletter to get a chance of winning Arsenal 
+        jersey signed by <span id="highlight">Martin Odegaard!</span>
+      </p>
+      <form  method="post" action="https://benjdd.com/sp">
+        <div>
+          <label for="fname">First Name: </label>
+          <input pattern="[A-Z][a-z]+" type="text" id="fname" name="fname" required>
+        </div>
+
+        <div>
+          <label for="lname">Last Name: </label>
+          <input pattern="[A-Z][a-z]+" type="text" id="lname" name="lname" required>
+        </div>
+
+        <div>
+          <label for="p-email">Primary Email: </label>
+          <input type="email" id="p-email" name="p-email" required>
+        </div>
+
+        <div>
+          <label for="password">Password: </label>
+          <input pattern=".{8,}" type="password" id="password" name="password" required>
+        </div>
+
+        <div>
+          <label for="r-email">Recovery Email: </label>
+          <input type="email" id="r-email" name="r-email">
+        </div>
+
+        <div>
+          <label for="phone-number">Phone Number: </label>
+          <input pattern="[0-9]{3}-[0-9]{4}" 
+          type="tel" id="phone-number" name="phone-number">
+        </div>
+
+        <div>
+          <label for="weight">Weight in lbs: </label>
+          <input type="number" id="weight" name="weight">
+        </div>
+
+        <div>
+          <label for="bio">Bio: </label>
+          <textarea rows=4 maxlength="100" id="bio" name="bio"></textarea>
+        </div>
+
+        <div>
+          <label for="birthday">Birthday: </label>
+          <input type="text" pattern="[0-9]{4}-(0[0-9]|1[0-2])-[0-9]{2}" 
+          id="birthday" name="birthday">
+        </div>
+
+        <div>
+          <label for="newsletter">Newsletter sign-up:</label>
+          <input type="radio" id="newsletter" name="newsletter" value="yes" required>
+          <label for="newsletter" id="yes-label">yes</label>
+          <input type="radio" id="no" name="newsletter" value="no" required>
+          <label for="no" id="no-label">no</label>
+        </div>
+
+        <div>
+          <label for="satisfaction">Satisfaction Level (1-10): </label>
+          <input type="range" min="1" max="10" id="satisfaction" name="satisfaction">
+        </div>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>
